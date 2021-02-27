@@ -1,13 +1,17 @@
-import React from 'react'
-import moment from 'moment'
+import React from 'react';
+import styled from 'styled-components';
 
-const About: React.FC = () => {
-  return (
-    <div>
-      <h1>About</h1>
-      <p>{moment().format('MMMM Do YYYY, h:mm:ss a')}</p>
-    </div>
-  )
-}
+const About: React.FC = () => (
+  <Div>
+    <H1>About</H1>
+    <P>{new Date().getTime()}</P>
+  </Div>
+);
 
-export default About
+const Div = styled.div``;
+
+const H1 = styled.h1``;
+
+const P = styled.p``;
+
+export default About;

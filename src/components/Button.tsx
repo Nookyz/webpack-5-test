@@ -1,17 +1,13 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from 'react';
+import styled from 'styled-components';
 
 interface Props {
-  onClick: () => void
+  onClick: () => void;
 }
 
-const Button: React.FC<Props> = ({ children, onClick }) => {
-  return (
-    <CustomButton onClick={onClick}>
-      {children}
-    </CustomButton>
-  )
-}
+const Button: React.FC<Props> = ({ children, onClick }) => (
+  <CustomButton onClick={onClick}>{children}</CustomButton>
+);
 
 const CustomButton = styled.button`
   width: 100%;
@@ -19,6 +15,6 @@ const CustomButton = styled.button`
   background: #41ac4a;
   outline: none;
   border: none;
-`
+`;
 
-export default Button
+export default Button;

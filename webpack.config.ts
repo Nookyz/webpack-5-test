@@ -44,10 +44,11 @@ const config: webpack.Configuration = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".jsx"],
-    // alias: {
-    //   '@': '/src',
-    //   '@components': '/src/components'
-    // }
+    alias: {
+      '@': '/src',
+      '@components': '/src/components',
+      '@containers': '/src/containers',
+    },
   },
   plugins: [
     new CleanWebpackPlugin(),
