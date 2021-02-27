@@ -1,0 +1,71 @@
+// {
+//   "compilerOptions": {
+//     "target": "es5",
+//     "lib": [
+//       "dom",
+//       "dom.iterable",
+//       "esnext"
+//     ],
+//     "allowJs": true,
+//     "skipLibCheck": true,
+//     "esModuleInterop": true,
+//     "allowSyntheticDefaultImports": true,
+//     "strict": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "noFallthroughCasesInSwitch": true,
+//     "moduleResolution": "node",
+//     "resolveJsonModule": true,
+//     "isolatedModules": true,
+//     "noEmit": true,
+//     "jsx": "react-jsx",
+//     "baseUrl": "src",
+//     "paths": {
+//       "@/*": ["*"],
+//       "@components/*": ["./components/*"]
+//     }
+//   },
+//   "include": ["src/**/*", "webpack.config.ts"],
+//   "exclude": ["node_modules"]
+// }
+
+// {
+//   "compilerOptions": {
+//     "target": "es5",
+//     "module": "commonjs",
+//     "jsx": "react",
+//     "strict": true,
+//     "noImplicitAny": true,
+//     "esModuleInterop": true,
+//     "downlevelIteration": true,
+//     "baseUrl": "src",
+//     "paths": {
+//       "@/*": ["*"]
+//     }
+//   },
+//   "include": ["src/**/*", "webpack.config.ts"],
+//   "exclude": ["node_modules"]
+// }
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "jsx": "react",
+    "strict": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "isolatedModules": false,
+    "lib": [
+      "es2019",
+      "dom"
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],
+      "@components/*": ["./components/*"],
+      "@containers/*": ["./containers/*"]
+    }
+  },
+  "include": ["src/**/*", "webpack.config.ts"],
+  "exclude": ["node_modules"]
+}
