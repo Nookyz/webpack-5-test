@@ -1,7 +1,7 @@
 import path from "path";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-// import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 // import ESLintPlugin from "eslint-webpack-plugin";
 // import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
@@ -54,24 +54,24 @@ const config: webpack.Configuration = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: "src/public/index.html",
-      // minify:
-      //   NODE_ENV === 'production'
-      //     ? {
-      //       collapseWhitespace: true,
-      //       removeComments: true,
-      //       removeRedundantAttributes: true,
-      //       removeScriptTypeAttributes: true,
-      //       removeStyleLinkTypeAttributes: true,
-      //       useShortDoctype: true,
-      //       minifyCSS: true,
-      //     }
-      //     : false,
+      minify:
+        NODE_ENV === 'production'
+          ? {
+            collapseWhitespace: true,
+            removeComments: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            useShortDoctype: true,
+            minifyCSS: true,
+          }
+          : false,
     }),
-    // new ForkTsCheckerWebpackPlugin({
-    //   typescript: {
-    //     configFile: './tsconfig.json',
-    //   },
-    // }),
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {
+        configFile: './tsconfig.json',
+      },
+    }),
     // new webpack.HotModuleReplacementPlugin(),
     // new ReactRefreshWebpackPlugin(),
     // new ESLintPlugin({
