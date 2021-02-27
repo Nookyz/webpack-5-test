@@ -2,7 +2,7 @@ import path from "path";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 // import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
-import ESLintPlugin from "eslint-webpack-plugin";
+// import ESLintPlugin from "eslint-webpack-plugin";
 // import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
@@ -73,9 +73,9 @@ const config: webpack.Configuration = {
     // }),
     // new webpack.HotModuleReplacementPlugin(),
     // new ReactRefreshWebpackPlugin(),
-    new ESLintPlugin({
-      extensions: ["js", "jsx", "ts", "tsx"],
-    }),
+    // new ESLintPlugin({
+    //   extensions: ["js", "jsx", "ts", "tsx"],
+    // }),
   ],
   // devtool: NODE_ENV === 'development' ? 'source-map' : 'source-map',
   devServer: {
